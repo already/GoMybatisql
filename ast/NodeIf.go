@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"github.com/already/GoMybatisql/utils"
+	"github.com/already/gobatisql/utils"
 )
 
 //判断节点

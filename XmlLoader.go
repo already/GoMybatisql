@@ -1,7 +1,7 @@
 package GoMybatis
 
 import (
-	"github.com/already/GoMybatisql/utils"
+	"github.com/already/gobatisql/utils"
 	"github.com/beevik/etree"
 	"reflect"
 )
