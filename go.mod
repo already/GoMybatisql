@@ -1,5 +1,5 @@
-module github.com/zhuxiujia/GoMybatis
+module github.com/already/GoMybatisql
 
 go 1.16
 
-require github.com/go-sql-driver/mysql v1.6.0
+require github.com/beevik/etree v1.1.0

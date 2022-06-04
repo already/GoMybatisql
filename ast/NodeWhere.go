@@ -2,7 +2,6 @@ package ast
 
 import (
 	"bytes"
-	"github.com/zhuxiujia/GoMybatis/stmt"
 )
 
 //Trim操作节点
@@ -15,8 +14,8 @@ func (it *NodeWhere) Type() NodeType {
 	return NWhere
 }
 
-func (it *NodeWhere) Eval(env map[string]interface{}, arg_array *[]interface{}, stmtConvert stmt.StmtIndexConvert) ([]byte, error) {
-	var sql, err = DoChildNodes(it.childs, env, arg_array, stmtConvert)
+func (it *NodeWhere) Eval(env map[string]interface{}, arg_array *[]interface{}) ([]byte, error) {
+	var sql, err = DoChildNodes(it.childs, env, arg_array)
 	if err != nil {
 		return nil, err
 	}

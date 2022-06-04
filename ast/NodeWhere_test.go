@@ -17,7 +17,7 @@ func TestNodeWhere_Eval(t *testing.T) {
 		holder:              &NodeConfigHolder{},
 	}}
 
-	var s, e = w.Eval(nil, nil, nil)
+	var s, e = w.Eval(nil, nil)
 	if e != nil {
 		t.Fatal(e)
 	}

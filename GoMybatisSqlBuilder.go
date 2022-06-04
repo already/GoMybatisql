@@ -1,8 +1,7 @@
 package GoMybatis
 
 import (
-	"github.com/zhuxiujia/GoMybatis/ast"
-	"github.com/zhuxiujia/GoMybatis/stmt"
+	"github.com/already/GoMybatisql/ast"
 )
 
 type GoMybatisSqlBuilder struct {
@@ -26,9 +25,9 @@ func (it GoMybatisSqlBuilder) New(expressionEngine ExpressionEngineProxy, log Lo
 	return it
 }
 
-func (it *GoMybatisSqlBuilder) BuildSql(paramMap map[string]interface{}, nodes []ast.Node, arg_array *[]interface{}, stmtConvert stmt.StmtIndexConvert) (string, error) {
+func (it *GoMybatisSqlBuilder) BuildSql(paramMap map[string]interface{}, nodes []ast.Node, arg_array *[]interface{}) (string, error) {
 	//抽象语法树节点构建
-	var sql, err = ast.DoChildNodes(nodes, paramMap, arg_array, stmtConvert)
+	var sql, err = ast.DoChildNodes(nodes, paramMap, arg_array)
 	if err != nil {
 		return "", err
 	}

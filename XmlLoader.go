@@ -1,8 +1,8 @@
 package GoMybatis
 
 import (
-	"github.com/zhuxiujia/GoMybatis/lib/github.com/beevik/etree"
-	"github.com/zhuxiujia/GoMybatis/utils"
+	"github.com/already/GoMybatisql/utils"
+	"github.com/beevik/etree"
 	"reflect"
 )
 
@@ -75,10 +75,3 @@ func includeElementReplace(xml *etree.Element, xmlMap *map[string]etree.Token) {
 		}
 	}
 }
-
-////标签上下级关系检查
-//func elementRuleCheck(fatherElement *etree.Element, childElementItem ElementItem) {
-//	if fatherElement.Tag != Element_choose && (childElementItem.ElementType == Element_when || childElementItem.ElementType == Element_otherwise) {
-//		panic("[GoMybatis] find element <" + childElementItem.ElementType + "> not in <choose>!")
-//	}
-//}

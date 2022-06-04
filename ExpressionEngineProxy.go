@@ -1,8 +1,9 @@
 package GoMybatis
 
 import (
-	"github.com/zhuxiujia/GoMybatis/ast"
-	"github.com/zhuxiujia/GoMybatis/utils"
+	"fmt"
+	"github.com/already/GoMybatisql/ast"
+	"github.com/already/GoMybatisql/utils"
 )
 
 type ExpressionEngineProxy struct {
@@ -97,6 +98,7 @@ func (it *ExpressionEngineProxy) LexerAndEval(expression string, arg interface{}
 	var funcItem = arg.(map[string]interface{})["func_"+expression]
 	if funcItem != nil {
 		var f = funcItem.(func(arg map[string]interface{}) interface{})
+		fmt.Println("------------->")
 		return f(arg.(map[string]interface{})), nil
 	}
 	ifElementevalExpression, err := it.Lexer(expression)

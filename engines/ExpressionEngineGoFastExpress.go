@@ -1,7 +1,7 @@
 package engines
 
 import (
-	"github.com/zhuxiujia/GoMybatis/lib/github.com/zhuxiujia/GoFastExpress"
+	"github.com/already/GoMybatisql/lib/github.com/zhuxiujia/GoFastExpress"
 	"strings"
 )
 

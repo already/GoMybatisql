@@ -2,23 +2,22 @@ package ast
 
 import (
 	"bytes"
-	"github.com/zhuxiujia/GoMybatis/stmt"
 )
 
 //sql构建抽象语法树节点
 type Node interface {
 	Type() NodeType
-	Eval(env map[string]interface{}, arg_array *[]interface{}, stmtConvert stmt.StmtIndexConvert) ([]byte, error)
+	Eval(env map[string]interface{}, arg_array *[]interface{}) ([]byte, error)
 }
 
 //执行子所有节点
-func DoChildNodes(childNodes []Node, env map[string]interface{}, arg_array *[]interface{}, stmtConvert stmt.StmtIndexConvert) ([]byte, error) {
+func DoChildNodes(childNodes []Node, env map[string]interface{}, arg_array *[]interface{}) ([]byte, error) {
 	if childNodes == nil {
 		return nil, nil
 	}
 	var sql bytes.Buffer
 	for _, v := range childNodes {
-		var r, e = v.Eval(env, arg_array, stmtConvert)
+		var r, e = v.Eval(env, arg_array)
 		if e != nil {
 			return nil, e
 		}
