@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"github.com/already/batisql/utils"
+	"github.com/already/batisql/v7/utils"
 )
 
 type NodeWhen struct {

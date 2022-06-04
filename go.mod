@@ -1,4 +1,4 @@
-module github.com/already/batisql
+module github.com/already/batisql/v7
 
 go 1.16
 

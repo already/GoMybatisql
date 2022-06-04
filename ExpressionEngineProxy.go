@@ -2,8 +2,8 @@ package GoMybatis
 
 import (
 	"fmt"
-	"github.com/already/batisql/ast"
-	"github.com/already/batisql/utils"
+	"github.com/already/batisql/v7/ast"
+	"github.com/already/batisql/v7/utils"
 )
 
 type ExpressionEngineProxy struct {

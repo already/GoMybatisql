@@ -1,7 +1,7 @@
 package GoMybatis
 
 import (
-	"github.com/already/batisql/ast"
+	"github.com/already/batisql/v7/ast"
 )
 
 type GoMybatisSqlBuilder struct {

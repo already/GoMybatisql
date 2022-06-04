@@ -1,6 +1,6 @@
 # 表达式执行引擎包
 
-## 引擎必须实现AST包 github.com/already/batisql/ast 下  ast.ExpressionEngine
+## 引擎必须实现AST包 github.com/already/batisql/v7/ast 下  ast.ExpressionEngine
 ```
 type ExpressionEngine interface {
 	//引擎名称

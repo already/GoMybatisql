@@ -2,8 +2,8 @@ package GoMybatis
 
 import (
 	"fmt"
-	"github.com/already/batisql/engines"
-	"github.com/already/batisql/utils"
+	"github.com/already/batisql/v7/engines"
+	"github.com/already/batisql/v7/utils"
 	"github.com/beevik/etree"
 	"testing"
 	"time"
