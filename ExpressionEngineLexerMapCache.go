@@ -1,7 +1,7 @@
 package GoMybatis
 
 import (
-	"github.com/already/gobatisql/utils"
+	"github.com/already/batisql/utils"
 	"sync"
 )
 
